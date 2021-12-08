@@ -10,7 +10,7 @@ module.exports = {
       bold: 700,
      },
     screens: {
-      sm: '480px',
+      sm: '640px',
       md: '768px',
       lg: '976px',
       xl: '1440px',
@@ -37,6 +37,9 @@ module.exports = {
         '3xl': '1.75rem',
         '4xl': '3rem',
         '5xl': '5rem',
+       },
+       height: {
+         '600': '37.5rem'
        },
     },
   },

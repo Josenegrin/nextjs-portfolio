@@ -1,16 +1,16 @@
 :root {
-  --primary: #34a7ff; 
-  --white: #fffffe; 
-  --black: #141414; 
-  --grey: #9ba4ad; 
-  --headline1: 700 5rem/normal Maven Pro; 
-  --headline2: 700 1.75rem/normal Maven Pro; 
-  --headline3: 700 1.625rem/3rem Maven Pro; 
-  --headline4: 700 1.5rem/normal Maven Pro; 
-  --button: 700 1.125rem/1.75rem Maven Pro; 
-  --body1-regular: 400 1.125rem/1.75rem Maven Pro, sans-serif; 
-  --body1-bold: 700 1.125rem/1.75rem Maven Pro, sans-serif; 
-  --body2-regular: 400 1rem/normal Maven Pro, sans-serif; 
+  --primary: #34a7ff;
+  --white: #fffffe;
+  --black: #141414;
+  --grey: #9ba4ad;
+  --headline1: 700 5rem / normal Maven Pro;
+  --headline2: 700 1.75rem / normal Maven Pro;
+  --headline3: 700 1.625rem/3rem Maven Pro;
+  --headline4: 700 1.5rem / normal Maven Pro;
+  --button: 700 1.125rem/1.75rem Maven Pro;
+  --body1-regular: 400 1.125rem/1.75rem Maven Pro, sans-serif;
+  --body1-bold: 700 1.125rem/1.75rem Maven Pro, sans-serif;
+  --body2-regular: 400 1rem / normal Maven Pro, sans-serif;
 }
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap');
 @tailwind base;
@@ -32,22 +32,21 @@ a {
   box-sizing: border-box;
 }
 h1 {
-  font: 700 5rem/normal Maven Pro, sans-serif; 
-
+  font: 700 5rem / normal Maven Pro, sans-serif;
 }
 
 h2 {
-  font: 700 1.75rem/normal Maven Pro, sans-serif;
+  font: 700 1.75rem / normal Maven Pro, sans-serif;
 }
 h3 {
   font: 700 1.625rem/3rem Maven Pro, sans-serif;
 }
 h4 {
-  font: 700 1.5rem/normal Maven Pro, sans-serif; 
+  font: 700 1.5rem / normal Maven Pro, sans-serif;
 }
 
 button {
-  font: 700 1.125rem/1.75rem Maven Pro, sans-serif; 
+  font: 700 1.125rem/1.75rem Maven Pro, sans-serif;
 }
 
 .body_1_regular {
@@ -58,4 +57,38 @@ button {
 }
 .body_1_bold {
   font: var(--body1-bold);
+}
+.gradient_dark {
+  background: linear-gradient(rgba(4, 0, 30, 0.05) #04001e);
+}
+.gradient_lg_dark {
+  background: linear-gradient(92.64deg, rgba(4, 0, 30, 0.05) 28.95%, #04001e 62.36%),
+    linear-gradient(90.57deg, rgba(4, 0, 30, 0.05) 40.42%, #04001e 97.31%),
+    radial-gradient(100% 674.97% at 0% 38.42%, rgba(4, 0, 30, 0) 55.49%, #04001e 100%),
+    radial-gradient(106% 798.62% at 117.57% 58.08%, #04001e 49.6%, rgba(4, 0, 30, 0) 80.12%);
+}
+.gradient_purple_to_pink {
+  background: linear-gradient(149.69deg, #fd6585 -14.03%, #0d25b9 61.54%);
+}
+.gradient_lg_purple_to_pink {
+  background: linear-gradient(211.85deg, #fd6585 -42.56%, #0d25b9 80.81%);
+}
+
+.gradient_blue_to_green {
+  background: linear-gradient(135deg, #f0ff00 0%, #58cffb 100%);
+}
+.gradient_lg_blue_to_green {
+  background: linear-gradient(135deg, #f0ff00 0%, #58cffb 100%);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.gradient_coral {
+  background: linear-gradient(135deg, #feb692 0%, #ea5455 100%);
+}
+.gradient_lg_coral {
+  background: linear-gradient(135deg, #feb692 0%, #ea5455 100%);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.height_600 {
+  height: 600px;
 }

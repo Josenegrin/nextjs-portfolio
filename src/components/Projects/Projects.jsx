@@ -1,22 +1,31 @@
 import React from 'react'
 import Image from 'next/image'
-import Landing1 from '../../../public/Thumbnail-Landing page pruebas remotas 1.svg'
+
 import Button from '../Button/Button'
-const Projects = () => {
+const Projects = ({ alt, imageSource, title, description, gradientClass, descriptionColor, titleColor, right, first, second }) => {
+  const bgClass = `grid auto-rows-max place-items-center bg-primary-black lg:grid-cols-2 lg:grid-flow-col lg:h-600 lg:auto-rows-auto ${gradientClass}`
+
+  const titleClass = `pb-2 ${titleColor ? titleColor : 'text-primary-white'}`
+
+  const descriptionClass = `pb-2 ${descriptionColor ? descriptionColor : 'text-primary-grey'}`
+
+  const imageClass = `relative top-0 h-64 w-screen lg:h-full lg:w-full ${right ? 'lg:col-start-2 lg:col-end-3' : ''}`
+
+  const textContainerClass = `px-6 pt-6 pb-16 lg:pt-44 lg:pb-44 ${right ? 'lg:pl-36' : 'lg:pr-36'}`
   return (
-    <section className='container container grid auto-rows-max place-items-center bg-primary-black'>
-      <Image 
-      className='top-0'
-      alt='Thumbnail landing one'
-      src={Landing1}
-      height={270}
-      width={360}
-      />
-      <div className='px-6 pt-6 pb-16'>
-      <h4 className='text-primary-white pb-2'>Landing Page de Pruebas Remotas</h4>
-      <p className='text-primary-grey pb-2'>Aprende a construir una eficiente y bonita Landing Page que puedes aplicar para todo tipo de proyecto personal.</p>
-      <Button text='Ver proyecto'/>
-      <Button black text='Ver código'/>
+    <section className={bgClass}>
+      {imageSource && (
+        <div className={imageClass}>
+          <Image alt={alt} src={imageSource} layout='fill' objectFit='cover' />
+        </div>
+      )}
+      <div className={textContainerClass}>
+        <h4 className={titleClass}>{title}</h4>
+        <p className={descriptionClass}>{description}</p>
+        <div className='lg:flex'>
+          <Button buttonColor={first} otherClass='lg:mr-4' text='Ver proyecto' />
+          <Button buttonColor={second} text='Ver código' />
+        </div>
       </div>
     </section>
   )
